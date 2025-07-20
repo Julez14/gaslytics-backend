@@ -1,5 +1,29 @@
 # Activity Log
 
+## 2024-01-XX - Repository Restructuring and Deployment Fixes
+
+### User Prompt: "Deploy crashed. here are logs: ... its having trouble with the twelve labs api key. Am I puling it from the railway environment correctly?"
+
+**Actions taken:**
+
+1. **Diagnosed environment variable issue**: Railway deployment failing with `TWELVE_LABS_API_KEY is not set in environment variables`
+2. **Identified root cause**: `server.ts` (main entry point) wasn't calling `dotenv.config()` before importing modules that need env vars
+3. **Fixed environment loading order**: Added `dotenv.config()` at the top of `server.ts` before any imports that depend on env vars
+4. **Rebuilt project**: Ran `npm run build` to generate corrected dist files
+5. **Committed fix**: Git commit `85cd296` with environment variable loading fix
+
+**Technical details:**
+
+- Issue was that `videoProcessor.js` tried to access `process.env.TWELVE_LABS_API_KEY` on import, but dotenv wasn't loaded yet
+- In production (Railway), environment variables must be loaded before module imports that depend on them
+- Alternative: Set environment variables directly in Railway dashboard (recommended for production)
+
+**Railway Environment Setup Needed:**
+
+- Set `TWELVE_LABS_API_KEY` in Railway dashboard
+- Set `GEMINI_API_KEY` in Railway dashboard
+- Optionally set `FRONTEND_URL` for CORS configuration
+
 ## 2024-01-XX - Repository Restructuring and Deployment Fix
 
 ### User Prompt: "The deployment crashed. Here are the deploy logs..."
