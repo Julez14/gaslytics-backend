@@ -1,5 +1,8 @@
+import dotenv from "dotenv";
 import http from "http";
 import { processVideoWithTwelveLabs, } from "./videoProcessor.js";
+// Load environment variables first
+dotenv.config();
 const PORT = process.env.PORT || 3001;
 // CORS headers for production
 const corsHeaders = {
