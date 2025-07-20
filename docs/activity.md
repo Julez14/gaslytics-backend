@@ -2,6 +2,24 @@
 
 ## 2024-01-XX - Repository Restructuring and Deployment Fixes
 
+### User Prompt: "twelve labs: tlk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX gemini: AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+**Actions taken:**
+
+1. **Installed Railway CLI**: Used Homebrew to install Railway CLI v4.5.5
+2. **Diagnosed missing environment variables**: Ran `railway variables` and confirmed API keys were missing
+3. **Set required environment variables**: Used Railway CLI to set both API keys
+   - `TWELVE_LABS_API_KEY=tlk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+   - `GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+4. **Verified environment setup**: Confirmed both variables are now visible in Railway environment
+5. **Updated documentation**: Updated activity log to reflect completed environment setup
+
+**Expected outcome:**
+
+- Railway will automatically redeploy with new environment variables
+- Application should start successfully without "TWELVE_LABS_API_KEY is not set" error
+- All API integrations (TwelveLabs and Gemini) should now work in production
+
 ### User Prompt: "Deploy crashed. here are logs: ... its having trouble with the twelve labs api key. Am I puling it from the railway environment correctly?"
 
 **Actions taken:**
@@ -18,11 +36,11 @@
 - In production (Railway), environment variables must be loaded before module imports that depend on them
 - Alternative: Set environment variables directly in Railway dashboard (recommended for production)
 
-**Railway Environment Setup Needed:**
+**Railway Environment Setup Completed:**
 
-- Set `TWELVE_LABS_API_KEY` in Railway dashboard
-- Set `GEMINI_API_KEY` in Railway dashboard
-- Optionally set `FRONTEND_URL` for CORS configuration
+- ✅ Set `TWELVE_LABS_API_KEY` in Railway: `tlk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+- ✅ Set `GEMINI_API_KEY` in Railway: `AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+- ✅ Deployment should now work correctly with all required environment variables
 
 ## 2024-01-XX - Repository Restructuring and Deployment Fix
 
