@@ -3,7 +3,7 @@ import { promises as fsPromises } from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-import { generateInsights } from "./gemini"; // Import the new Gemini service
+import { generateInsights } from "./gemini.js"; // Import the new Gemini service
 dotenv.config();
 // Get current directory for ES modules
 const __filename = fileURLToPath(import.meta.url);
