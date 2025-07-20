@@ -9,8 +9,6 @@
 1. **Installed Railway CLI**: Used Homebrew to install Railway CLI v4.5.5
 2. **Diagnosed missing environment variables**: Ran `railway variables` and confirmed API keys were missing
 3. **Set required environment variables**: Used Railway CLI to set both API keys
-   - `TWELVE_LABS_API_KEY=tlk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
-   - `GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
 4. **Verified environment setup**: Confirmed both variables are now visible in Railway environment
 5. **Updated documentation**: Updated activity log to reflect completed environment setup
 
