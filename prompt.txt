@@ -35,6 +35,7 @@ Guidelines:
 • Include a numeric confidence score (0–100) in each clip reflecting model certainty.  
 • Provide a concise solution or healthy response strategy for effectively dealing with the identified manipulation tactic.  
 • List clips in chronological order by startTime.  
+• The start time and end time MUST be in HH:MM:SS format, NOT MM:SS.
 
 4. Language scope  
 Analyze English speech only; ignore non-English segments unless subtitles provide an English translation.

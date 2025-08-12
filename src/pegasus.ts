@@ -1,3 +1,4 @@
+// Scrupt to test the TwelveLabs analyze API
 // Run with npx tsx src/pegasus.ts
 
 import { TwelveLabs, SearchData, Task } from "twelvelabs-js";

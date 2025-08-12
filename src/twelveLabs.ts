@@ -1,3 +1,4 @@
+// Script to test the TwelveLabs search API.
 // Run with npx tsx src/twelveLabs.ts
 
 import { TwelveLabs, SearchData, Task } from "twelvelabs-js";
